@@ -2,7 +2,8 @@
 
 > **"What if an NPC didn't die when you turned off the server?"**
 
-![Eterna Logo](https://github.com/GokhanCey/Eterna/raw/main/public/logo.png)
+<img width="200" height="200" alt="eterna-logo" src="https://github.com/user-attachments/assets/658835b2-650f-40cb-9834-994e65401114" />
+
 
 ## 🌌 The Vision
 Let's face it: AI agents today are fragile. They live on centralized servers (AWS, OpenAI), they have no long-term memory, and if the dev stops paying the bill, they vanish.
