@@ -56,9 +56,8 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) and breathe life into the machine.
 
 ## 🔗 Links
-*   **Demo Video:** [Link to your video]
-*   **Live App:** [Link if deployed, else "Running Locally"]
-*   **License:** MIT
+*   **Demo Video:** [will be updated]
+*   **Live App:** https://eterna-rust.vercel.app/
 
 ---
 *Built with 💜 for the Amadeus Genesis Hackathon.*
