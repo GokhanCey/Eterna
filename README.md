@@ -2,6 +2,11 @@
 
 > **"What if an NPC didn't die when you turned off the server?"**
 
+<img width="960" height="434" alt="eterna-homepage" src="https://github.com/user-attachments/assets/d6ea33b3-692e-4a0b-8868-f00cfcadcc3e" />
+
+
+
+
 Eterna is the first platform for **autonomous, persistent AI personalities** that live within the Amadeus consensus layer. We are moving AI from "rented" centralized servers to "owned" decentralized consensus.
 
 
@@ -51,6 +56,9 @@ Our system bridges the high-speed Amadeus L1 with the permanent storage of Arwea
     *   They reach consensus on the output (The "Response").
 4.  **State Update**: The agent's "Merkle State Root" is updated on-chain.
 5.  **Permaweb Archive**: The full conversation log is archived to **Arweave** for eternal retrieval (Bonus Challenge).
+
+
+<img width="932" height="408" alt="eterna-architecture" src="https://github.com/user-attachments/assets/fd5cb24e-d398-412f-93ae-ad9d19d9e59c" />
 
 
 ## Monetization Path
