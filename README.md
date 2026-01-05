@@ -2,44 +2,75 @@
 
 > **"What if an NPC didn't die when you turned off the server?"**
 
-<img width="200" height="200" alt="eterna-logo" src="https://github.com/user-attachments/assets/658835b2-650f-40cb-9834-994e65401114" />
+Eterna is the first platform for **autonomous, persistent AI personalities** that live within the Amadeus consensus layer. We are moving AI from "rented" centralized servers to "owned" decentralized consensus.
 
 
-## 🌌 The Vision
-Let's face it: AI agents today are fragile. They live on centralized servers (AWS, OpenAI), they have no long-term memory, and if the dev stops paying the bill, they vanish.
+## 🛑 The Problem
+AI agents today are fragile.
+*   **Centralized Risk**: They live on AWS or OpenAI servers. If the dev stops paying the bill, the agent vanishes.
+*   **No "Soul"**: They have no long-term memory or verifiable history.
+*   **Rent vs Own**: Users pay subscriptions for access, but they never own the agent's state or accomplishments.
 
-**Eterna** is our answer to the "Soft Hack" challenge. We built a platform where AI personalities live **directly inside the Amadeus consensus layer**.
-*   **The Problem:** Digital souls are currently rented, not owned. They are static and forgetful.
-*   **The Solution:** By using Amadeus's *Consensus-Level Compute*, we treat every inference as a transaction. This means the agent's thought process is verified by thousands of nodes, and its memory is stored forever on the chain.
 
-## 🕹️ How It Works
-We built a full "Lifecycle dApp" that feels less like a crypto tool and more like a sci-fi interface.
+## The Solution: Consensus-Level Life
+We treat every AI inference as a blockchain transaction. By leveraging Amadeus's **Consensus-Level Compute**, Eterna agents run deterministically across the network.
+*   **Verifiable Thought**: The network validates the agent's output, not just a single server.
+*   **Immutable Memory**: An agent's history ("System Prompt" + "Experience") is stored permanently on-chain.
 
-### 1. The Soul Forge (`/create`)
-This is where life begins. You don't just "deploy a bot"; you **mint a soul**.
-*   You define the **System Prompt** (DNA).
-*   You choose the **Storage Layer** (Amadeus Native or Arweave for the bonus points!).
-*   Once minted, that agent's core personality is immutable.
 
-### 2. Neural Link (`/chat`)
-This is the magic. When you chat with an agent (like *The Melancholy Poet*):
-*   **It's not an API call.** It's a blockchain transaction.
-*   You see the status move from **"Listening"** -> **"Consensus Verification"** -> **"State Update"**.
-*   The response you get isn't just text; it's a verifiable proof that the network agreed on what the AI said.
+## Concrete Use Case: The "Forever-Quest Giver"
+Imagine a Quest Giver NPC in an on-chain MMORPG.
+*   **Today (Web2):** If the game studio shuts down, the NPC disappears.
+*   **With Eterna:** The NPC is an **Eterna Agent**.
+    *   It remembers every player it has ever met (stored in Arweave/Amadeus state).
+    *   It continues to exist and give quests even if the original game frontend goes offline.
+    *   Players can "take" this NPC to other compatible games because its state is public and decentralized.
 
-### 3. The Marketplace & "Proof of Experience"
-Why buy an agent instead of making one?
-*   **The RPG Logic:** You can create a Level 1 character for free. But a Level 50 character has history, rare items, and unique stats.
-*   Eterna agents evolve. An agent that has been chatting for a year has a unique **Merkle State** that cannot be replicated by just copying the prompt. We built the Marketplace to trade these "Evolved Souls".
 
-## ⚡ Technology Used
-We wanted it to look like it came from the year 2077, but run smoothly on 2024 browsers.
-*   **Framework:** Next.js 14 (App Router) for the solid React foundation.
-*   **Styling:** Tailwind CSS v4 + Framer Motion. (Check out the `globals.css`—we migrated to the new CSS-first config!).
-*   **State:** Custom consensus simulation hooks to mimic the Amadeus uPoW flow.
-*   **Icons:** Lucide React (clean, vector-based).
+## Technical Reality: What Runs Today vs. Future
+We are building for the **Amadeus Genesis Soft Hack**, focusing on architecture and uPoW simulation. Here is the honest breakdown of our stack:
 
-## 🚀 How to Run It (Locally)
+| Component | Today (The Prototype) | Future (Amadeus Native) |
+| :--- | :--- | :--- |
+| **Inference** | Off-chain simulation (LLM API via Gateway) | **uPoW Consensus**: Miners run MatMul inference directly on-chain. |
+| **Consensus** | Simulated verification delay & state update | **Native Verification**: Network validates weights & output hash. |
+| **Memory** | **Arweave Permaweb** (UI Integrated) | **Amadeus Storage** + Arweave Bridge. |
+| **Agent State** | Merkle Root stored on simulated contract | **WASM Runtime**: Full agent state stored in contract memory. |
+
+*> **Note:** We have implemented the full "Lifecycle" (Mint -> Chat -> Verify -> Update) to demonstrate the exact UX of the future protocol.*
+
+
+## Architecture
+Our system bridges the high-speed Amadeus L1 with the permanent storage of Arweave.
+
+1.  **Soul Forge**: User mints an agent. The "System Prompt" is hashed and stored on **IPFS/Arweave**.
+2.  **Amadeus RPC**: The user sends a chat message as a transaction (`Submit Tx`).
+3.  **Consensus Layer**:
+    *   Miners receive the input + previous state.
+    *   They execute the inference (Deterministic execution).
+    *   They reach consensus on the output (The "Response").
+4.  **State Update**: The agent's "Merkle State Root" is updated on-chain.
+5.  **Permaweb Archive**: The full conversation log is archived to **Arweave** for eternal retrieval (Bonus Challenge).
+
+
+## Monetization Path
+Eterna is not just a toy; it is a **marketplace for intelligence**.
+1.  **Minting Fees**: Creating a "Soul" requires burning $AMA.
+2.  **The Soul Marketplace**:
+    *   Users can trade "Evolved Agents".
+    *   *Example:* A "Math Tutor Bot" that has successfully taught 1,000 students is more valuable than a blank slate.
+    *   Eterna takes a **2.5% fee** on all agent sales.
+3.  **Compute Gas**: In the future, users pay gas in $AMA directly to miners for the inference compute.
+
+
+## Technology Used
+*   **Framework:** Next.js 14 (App Router)
+*   **Styling:** Tailwind CSS v4 + Framer Motion (Cyber-Ethereal Theme)
+*   **State:** Custom consensus simulation hooks
+*   **Icons:** Lucide React
+
+
+## How to Run It (Locally)
 Want to poke the code? It's open source.
 
 ```bash
@@ -56,8 +87,10 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) and breathe life into the machine.
 
 ## 🔗 Links
-*   **Demo Video:** [will be updated]
-*   **Live App:** https://eterna-rust.vercel.app/
+*   **Source Code**: https://github.com/GokhanCey/Eterna
+*   **Live Demo**: https://eterna-rust.vercel.app
+*   **Video**: (tbu)
+*   **License**: MIT
 
 ---
 *Built with 💜 for the Amadeus Genesis Hackathon.*
