@@ -98,6 +98,7 @@ Open [http://localhost:3000](http://localhost:3000) and breathe life into the ma
 *   **Source Code**: https://github.com/GokhanCey/Eterna
 *   **Live Demo**: https://eterna-rust.vercel.app
 *   **Video**: https://youtu.be/ZAbGLFOoDc8
+*   **Pitch Deck**: https://github.com/GokhanCey/Eterna/blob/main/Eterna.pdf
 
 ---
 *Built with 💜 for the Amadeus Genesis Hackathon.*
